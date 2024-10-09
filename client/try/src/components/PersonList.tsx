@@ -80,25 +80,25 @@ const PersonList: React.FC = () => {
 
   return (
     <div className='relative overflow-x-auto shadow-md sm:rounded-lg bg-emerald-500 shadow-lg shadow-emerald-500/50 ...'>
-      <h2 className='mb-4 text-xl font-extrabold text-white dark:text-white md:text-xl lg:text-xl'>Person List</h2>
+      <h2 className='mb-4 text-xl font-extrabold text-white dark:text-white md:text-xl lg:text-xl p-4'>Person List</h2>
       {persons.length > 0 ? (
         <table className='w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 '>
           <thead className='text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400'>
             <tr>
-              <th>Name</th>
-              <th>Email</th>
-              <th>Phone</th>
-              <th>Address</th>
-              <th>Actions</th>
+              <th className='p-4'>Name</th>
+              <th className='p-4'>Email</th>
+              <th className='p-4'>Phone</th>
+              <th className='p-4'>Address</th>
+              <th className='p-4'>Actions</th>
             </tr>
           </thead>
           <tbody>
             {persons.map((person) => (
               <tr key={person.id} className='odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700'>
-                <td>{person.name}</td>
-                <td>{person.email}</td>
-                <td>{person.phone}</td>
-                <td>{person.address}</td>
+                <td className='p-4'>{person.name}</td>
+                <td className='p-4'>{person.email}</td>
+                <td className='p-4'>{person.phone}</td>
+                <td className='p-4'>{person.address}</td>
                 <td>
                   <button
                     onClick={() => handleUpdate(person)}
@@ -123,7 +123,7 @@ const PersonList: React.FC = () => {
 
       {/* Delete Confirmation Modal */}
       {personToDelete && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75">
           <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md text-center">
             <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to delete {personToDelete.name}?</h3>
             <button
@@ -144,7 +144,7 @@ const PersonList: React.FC = () => {
 
       {/* Edit form Modal */}
       {editingPerson && updatedPerson && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75 ">
           <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
             <h3 className='mb-4 text-xl font-extrabold text-gray-900 dark:text-white'>Edit Person</h3>
             <form onSubmit={(e) => {
