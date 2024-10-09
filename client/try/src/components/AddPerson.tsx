@@ -51,7 +51,7 @@ const AddPerson: React.FC<AddPersonProps> = ({ onAddPerson, inputRef }) => {
   };
 
   return (
-    <div className='relative overflow-x-auto shadow-md sm:rounded-lg bg-emerald-500 shadow-lg shadow-emerald-500/50 ...'>
+    <div className='relative overflow-x-auto shadow-md sm:rounded-lg bg-teal-600 shadow-lg shadow-teal-500/50 ...'>
       <h2 className='mb-4 text-xl font-extrabold text-white dark:text-white md:text-xl lg:text-xl p-4'>Add Person</h2>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Username</label>
